@@ -29,7 +29,7 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-        <a href=""
+        <a href="https://tailwindcss.com/docs/installation/using-vite"
           target="_blank">
           <img src={"https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"} className="logo react" alt="React logo" />
         </a>
@@ -39,18 +39,15 @@ function App() {
       </h1>
       <div className="flex flex-col items-center">
         <button className={theme === "Dark" ? (
-          'font-bold hover:bg-white/90 hover:text-gray-900 hover:scale-105 transforme-300 duration-200 cursor-pointer p-1 rounded-sm'
+          'font-bold m-5 border-2 hover:bg-white/90 hover:text-gray-900 hover:scale-105 transforme-300 duration-200 cursor-pointer p-1 rounded-sm'
         ) : (
-          'font-bold hover:bg-black hover:text-white hover:scale-105 transforme-300 duration-200 cursor-pointer p-1 rounded-sm'
+          'font-bold m- 5border-2 hover:bg-black hover:text-white hover:scale-105 transforme-300 duration-200 cursor-pointer p-1 rounded-sm'
         )} onClick={handleThema}>
           {theme}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Clique nos logotipos para saber mais
       </p>
     </div>
   )
