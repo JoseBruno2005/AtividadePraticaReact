@@ -1,11 +1,24 @@
+import { useNavigate } from "react-router-dom";
+
 export default function NavBar() {
+
+    const navigate = useNavigate()
+
+    const handleSobre = () => {
+        navigate('/sobre')
+    } 
+
+    const handleHome = () => {
+        navigate('/')
+    } 
+
     return (
         <nav className="w-screen bg-[#00d8ff] text-white font-bold p-5 flex justify-between items-center">
-            <div className="text-xl font-bold mr-200">
+            <div className="text-xl font-bold cursor-pointer" onClick={handleHome}>
                 Atividade React
             </div>
 
-            <ul className="flex space-x-6 gap-x-10">
+            <ul className="flex flex-row items-center space-x-6 gap-x-10">
                 <li>
                     <a href="https://www.linkedin.com/in/jose-bruno-bispo-parnaiba/" target="_blank" className="hover:bg-white/90 hover:text-gray-500 hover:scale-105 transforme-300 duration-200 cursor-pointer p-1 rounded-sm">
                         Meu Linkedin
@@ -15,6 +28,12 @@ export default function NavBar() {
                     <a href="https://github.com/JoseBruno2005" target="_blank" className="hover:bg-white/90 hover:text-gray-500 hover:scale-105 transforme-300 duration-200 cursor-pointer p-1 rounded-sm">
                         Meu Github
                     </a>
+                </li>
+                <li>
+                    <button className="hover:bg-white/90 hover:text-gray-500 hover:scale-105 transforme-300 duration-200 cursor-pointer p-1 rounded-sm"
+                    onClick={handleSobre}>
+                        Sobre
+                    </button>
                 </li>
             </ul>
         </nav>
